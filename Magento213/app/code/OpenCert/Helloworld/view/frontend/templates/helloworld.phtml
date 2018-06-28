@@ -1,0 +1,29 @@
+<h1><?php
+$this->getCatalogSession()->setMyName('This is Session');
+echo $block->getCatalogSession()->getMyName();
+echo "<br><br>";
+echo $this->getHelloWorldTxt();
+echo "<br><br>";
+echo $this->getRegistry();
+
+// $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+// /** @var \Magento\Catalog\Model\ResourceModel\Product\Collection $productCollection */
+// $productCollection = $objectManager->create('Magento\Catalog\Model\ResourceModel\Product\Collection');
+// /** Apply filters here */
+// $collection = $productCollection->addAttributeToSelect('*')
+//     ->load(12);
+//
+//
+//
+// foreach ($collection as $product){
+//  echo 'Name  =  '.$product->getName().'<br>';
+// }
+ 
+ ?></h1>
+
+
+<image src="http://giadinh.mediacdn.vn/2017/photo-6-1503647402350.jpg" atl='asd'/>
+
+<img src="<?php echo $block->getViewFileUrl('images/ngoctrinh.jpg'); ?>" alt="test" />
+
+<br> <br> <br>

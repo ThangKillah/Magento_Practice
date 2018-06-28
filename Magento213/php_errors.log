@@ -1,0 +1,170 @@
+[19-Jun-2018 13:56:54 UTC] PHP Fatal error:  Uncaught Magento\Framework\Exception\FileSystemException: The file "/var/www/html/Magento2/var/generation/Symfony/Component/Console/Input/ArrayInputFactory.php" cannot be deleted Warning!unlink(/var/www/html/Magento2/var/generation/Symfony/Component/Console/Input/ArrayInputFactory.php): Permission denied in /var/www/html/Magento2/vendor/magento/framework/Filesystem/Driver/File.php:382
+Stack trace:
+#0 /var/www/html/Magento2/vendor/magento/framework/Filesystem/Driver/File.php(405): Magento\Framework\Filesystem\Driver\File->deleteFile('/var/www/html/M...')
+#1 /var/www/html/Magento2/vendor/magento/framework/Filesystem/Driver/File.php(403): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/var/www/html/M...')
+#2 /var/www/html/Magento2/vendor/magento/framework/Filesystem/Driver/File.php(403): Magento\Framework\Filesystem\Driver\File->deleteDirectory('/var/www/html/M...')
+#3 /var/www/html/Magento2/vendor/magento/framework/Filesystem/Driver/File.php(403): Magento\Framework\Filesystem\Driver\File->deleteDire in /var/www/html/Magento2/vendor/magento/framework/Filesystem/Driver/File.php on line 382
+[20-Jun-2018 04:12:34 UTC] PHP Fatal error:  Uncaught RuntimeException: Can't create directory /var/www/html/Magento213/var/generation/Magento/Framework/App/ResourceConnection/. in /var/www/html/Magento213/vendor/magento/framework/Code/Generator.php:115
+Stack trace:
+#0 /var/www/html/Magento213/vendor/magento/framework/Code/Generator/Autoloader.php(35): Magento\Framework\Code\Generator->generateClass('Magento\\Framewo...')
+#1 [internal function]: Magento\Framework\Code\Generator\Autoloader->load('Magento\\Framewo...')
+#2 [internal function]: spl_autoload_call('Magento\\Framewo...')
+#3 /var/www/html/Magento213/vendor/magento/framework/Code/Reader/ClassReader.php(19): ReflectionClass->__construct('Magento\\Framewo...')
+#4 /var/www/html/Magento213/vendor/magento/framework/ObjectManager/Definition/Runtime.php(44): Magento\Framework\Code\Reader\ClassReader->getConstructor('Magento\\Framewo...')
+#5 /var/www/html/Magento213/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(48): Magento\Framework\ObjectManager\Definition\Runtime->getParameters in /var/www/html/Magento213/vendor/magento/framework/Code/Generator.php on line 115
+[20-Jun-2018 04:23:19 UTC] PHP Fatal error:  Uncaught TypeError: Argument 3 passed to OpenCert\Helloworld\Controller\Index\Index::__construct() must be an instance of Magento\Framework\Registry, none given, called in /var/www/html/Magento213/var/generation/OpenCert/Helloworld/Controller/Index/Index/Interceptor.php on line 14 and defined in /var/www/html/Magento213/app/code/OpenCert/Helloworld/Controller/Index/Index.php:12
+Stack trace:
+#0 /var/www/html/Magento213/var/generation/OpenCert/Helloworld/Controller/Index/Index/Interceptor.php(14): OpenCert\Helloworld\Controller\Index\Index->__construct(Object(Magento\Framework\App\Action\Context), Object(Magento\Framework\View\Result\PageFactory))
+#1 /var/www/html/Magento213/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(111): OpenCert\Helloworld\Controller\Index\Index\Interceptor->__construct(Object(Magento\Framework\App\Action\Context), Object(Magento\Framework\View\Result\PageFactory))
+#2 /var/www/html/Magento213/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(66): Ma in /var/www/html/Magento213/app/code/OpenCert/Helloworld/Controller/Index/Index.php on line 12
+[20-Jun-2018 04:23:22 UTC] PHP Fatal error:  Uncaught TypeError: Argument 3 passed to OpenCert\Helloworld\Controller\Index\Index::__construct() must be an instance of Magento\Framework\Registry, none given, called in /var/www/html/Magento213/var/generation/OpenCert/Helloworld/Controller/Index/Index/Interceptor.php on line 14 and defined in /var/www/html/Magento213/app/code/OpenCert/Helloworld/Controller/Index/Index.php:12
+Stack trace:
+#0 /var/www/html/Magento213/var/generation/OpenCert/Helloworld/Controller/Index/Index/Interceptor.php(14): OpenCert\Helloworld\Controller\Index\Index->__construct(Object(Magento\Framework\App\Action\Context), Object(Magento\Framework\View\Result\PageFactory))
+#1 /var/www/html/Magento213/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(111): OpenCert\Helloworld\Controller\Index\Index\Interceptor->__construct(Object(Magento\Framework\App\Action\Context), Object(Magento\Framework\View\Result\PageFactory))
+#2 /var/www/html/Magento213/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(66): Ma in /var/www/html/Magento213/app/code/OpenCert/Helloworld/Controller/Index/Index.php on line 12
+[20-Jun-2018 07:37:46 UTC] PHP Fatal error:  Uncaught Zend_Cache_Exception: cache_dir "/var/www/html/Magento213/var/page_cache" is not writable in /var/www/html/Magento213/vendor/magento/zendframework1/library/Zend/Cache.php:209
+Stack trace:
+#0 /var/www/html/Magento213/vendor/magento/zendframework1/library/Zend/Cache/Backend/File.php(180): Zend_Cache::throwException('cache_dir "/var...')
+#1 /var/www/html/Magento213/vendor/colinmollenhour/cache-backend-file/File.php(87): Zend_Cache_Backend_File->setCacheDir('/var/www/html/M...')
+#2 /var/www/html/Magento213/vendor/magento/zendframework1/library/Zend/Cache.php(153): Cm_Cache_Backend_File->__construct(Array)
+#3 /var/www/html/Magento213/vendor/magento/zendframework1/library/Zend/Cache.php(94): Zend_Cache::_makeBackend('Cm_Cache_Backen...', Array, true, true)
+#4 /var/www/html/Magento213/vendor/magento/framework/App/Cache/Frontend/Factory.php(155): Zend_Cache::factory('Magento\\Framewo...', 'Cm_Cache_Backen...', Array, Array, true, true, true)
+#5 /var/www/html/Magento213/vendor/magento/framework/App/Cache/Fron in /var/www/html/Magento213/vendor/magento/zendframework1/library/Zend/Cache.php on line 209
+[25-Jun-2018 06:41:51 UTC] PHP Fatal error:  Uncaught RuntimeException: Can't create directory /var/www/html/Magento213/var/generation/Magento/Framework/App/ResourceConnection/. in /var/www/html/Magento213/vendor/magento/framework/Code/Generator.php:115
+Stack trace:
+#0 /var/www/html/Magento213/vendor/magento/framework/Code/Generator/Autoloader.php(35): Magento\Framework\Code\Generator->generateClass('Magento\\Framewo...')
+#1 [internal function]: Magento\Framework\Code\Generator\Autoloader->load('Magento\\Framewo...')
+#2 [internal function]: spl_autoload_call('Magento\\Framewo...')
+#3 /var/www/html/Magento213/vendor/magento/framework/Code/Reader/ClassReader.php(19): ReflectionClass->__construct('Magento\\Framewo...')
+#4 /var/www/html/Magento213/vendor/magento/framework/ObjectManager/Definition/Runtime.php(44): Magento\Framework\Code\Reader\ClassReader->getConstructor('Magento\\Framewo...')
+#5 /var/www/html/Magento213/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(48): Magento\Framework\ObjectManager\Definition\Runtime->getParameters in /var/www/html/Magento213/vendor/magento/framework/Code/Generator.php on line 115
+[25-Jun-2018 06:52:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function OpenCert\Helloworld\Controller\Index\dd() in /var/www/html/Magento213/app/code/OpenCert/Helloworld/Controller/Index/Index.php:24
+Stack trace:
+#0 /var/www/html/Magento213/var/generation/OpenCert/Helloworld/Controller/Index/Index/Interceptor.php(24): OpenCert\Helloworld\Controller\Index\Index->execute()
+#1 /var/www/html/Magento213/vendor/magento/framework/App/Action/Action.php(102): OpenCert\Helloworld\Controller\Index\Index\Interceptor->execute()
+#2 /var/www/html/Magento213/vendor/magento/framework/Interception/Interceptor.php(74): Magento\Framework\App\Action\Action->dispatch(Object(Magento\Framework\App\Request\Http))
+#3 /var/www/html/Magento213/vendor/magento/framework/Interception/Chain/Chain.php(70): OpenCert\Helloworld\Controller\Index\Index\Interceptor->___callParent('dispatch', Array)
+#4 /var/www/html/Magento213/vendor/magento/framework/Interception/Chain/Chain.php(63): Magento\Framework\Interception\Chain\Chain->invokeNext('OpenCert\\Hellow...', 'dispatch', O in /var/www/html/Magento213/app/code/OpenCert/Helloworld/Controller/Index/Index.php on line 24
+[25-Jun-2018 06:52:34 UTC] PHP Fatal error:  Uncaught Exception: Recoverable Error: Object of class Magento\Framework\View\Result\Page\Interceptor could not be converted to string in /var/www/html/Magento213/app/code/OpenCert/Helloworld/Controller/Index/Index.php on line 24 in /var/www/html/Magento213/vendor/magento/framework/App/ErrorHandler.php:61
+Stack trace:
+#0 /var/www/html/Magento213/app/code/OpenCert/Helloworld/Controller/Index/Index.php(24): Magento\Framework\App\ErrorHandler->handler(4096, 'Object of class...', '/var/www/html/M...', 24, Array)
+#1 /var/www/html/Magento213/var/generation/OpenCert/Helloworld/Controller/Index/Index/Interceptor.php(24): OpenCert\Helloworld\Controller\Index\Index->execute()
+#2 /var/www/html/Magento213/vendor/magento/framework/App/Action/Action.php(102): OpenCert\Helloworld\Controller\Index\Index\Interceptor->execute()
+#3 /var/www/html/Magento213/vendor/magento/framework/Interception/Interceptor.php(74): Magento\Framework\App\Action\Action->dispatch(Object(Magento\Framework\App\Request\Http))
+#4 /var/www/html/Magento2 in /var/www/html/Magento213/vendor/magento/framework/App/ErrorHandler.php on line 61
+[26-Jun-2018 06:51:34 UTC] PHP Fatal error:  Uncaught RuntimeException: Can't create directory /var/www/html/Magento213/var/generation/Magento/Framework/App/ResourceConnection/. in /var/www/html/Magento213/vendor/magento/framework/Code/Generator.php:115
+Stack trace:
+#0 /var/www/html/Magento213/vendor/magento/framework/Code/Generator/Autoloader.php(35): Magento\Framework\Code\Generator->generateClass('Magento\\Framewo...')
+#1 [internal function]: Magento\Framework\Code\Generator\Autoloader->load('Magento\\Framewo...')
+#2 [internal function]: spl_autoload_call('Magento\\Framewo...')
+#3 /var/www/html/Magento213/vendor/magento/framework/Code/Reader/ClassReader.php(19): ReflectionClass->__construct('Magento\\Framewo...')
+#4 /var/www/html/Magento213/vendor/magento/framework/ObjectManager/Definition/Runtime.php(44): Magento\Framework\Code\Reader\ClassReader->getConstructor('Magento\\Framewo...')
+#5 /var/www/html/Magento213/vendor/magento/framework/ObjectManager/Factory/Dynamic/Developer.php(48): Magento\Framework\ObjectManager\Definition\Runtime->getParameters in /var/www/html/Magento213/vendor/magento/framework/Code/Generator.php on line 115
+[26-Jun-2018 11:54:33 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getCategoryIds() on null in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml:25
+Stack trace:
+#0 /var/www/html/Magento213/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
+#1 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(255): Magento\Framework\View\TemplateEngine\Php->render(Object(OpenCert\Helloworld\Block\Helloworld), '/var/www/html/M...', Array)
+#2 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(279): Magento\Framework\View\Element\Template->fetchView('/var/www/html/M...')
+#3 /var/www/html/Magento213/vendor/magento/framework/View/Element/AbstractBlock.php(659): Magento\Framework\View\Element\Template->_toHtml()
+#4 /var/www/html/Magento213/vendor/magento/module-email/Model/Template/Filter.php(404): Magento\Framework\View\Element\AbstractBlock->toHtml()
+#5 [internal function]: Magento\Email\Model\Template\Filter->blockDirective(Array)
+#6 /var/www/ in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml on line 25
+[26-Jun-2018 11:55:34 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getCategoryIds() on null in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml:25
+Stack trace:
+#0 /var/www/html/Magento213/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
+#1 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(255): Magento\Framework\View\TemplateEngine\Php->render(Object(OpenCert\Helloworld\Block\Helloworld), '/var/www/html/M...', Array)
+#2 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(279): Magento\Framework\View\Element\Template->fetchView('/var/www/html/M...')
+#3 /var/www/html/Magento213/vendor/magento/framework/View/Element/AbstractBlock.php(659): Magento\Framework\View\Element\Template->_toHtml()
+#4 /var/www/html/Magento213/vendor/magento/module-email/Model/Template/Filter.php(404): Magento\Framework\View\Element\AbstractBlock->toHtml()
+#5 [internal function]: Magento\Email\Model\Template\Filter->blockDirective(Array)
+#6 /var/www/ in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml on line 25
+[26-Jun-2018 11:55:38 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getCategoryIds() on null in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml:25
+Stack trace:
+#0 /var/www/html/Magento213/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
+#1 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(255): Magento\Framework\View\TemplateEngine\Php->render(Object(OpenCert\Helloworld\Block\Helloworld), '/var/www/html/M...', Array)
+#2 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(279): Magento\Framework\View\Element\Template->fetchView('/var/www/html/M...')
+#3 /var/www/html/Magento213/vendor/magento/framework/View/Element/AbstractBlock.php(659): Magento\Framework\View\Element\Template->_toHtml()
+#4 /var/www/html/Magento213/vendor/magento/module-email/Model/Template/Filter.php(404): Magento\Framework\View\Element\AbstractBlock->toHtml()
+#5 [internal function]: Magento\Email\Model\Template\Filter->blockDirective(Array)
+#6 /var/www/ in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml on line 25
+[26-Jun-2018 12:18:15 UTC] PHP Fatal error:  Uncaught Error: Class 'Mage' not found in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml:23
+Stack trace:
+#0 /var/www/html/Magento213/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
+#1 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(255): Magento\Framework\View\TemplateEngine\Php->render(Object(OpenCert\Helloworld\Block\Helloworld), '/var/www/html/M...', Array)
+#2 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(279): Magento\Framework\View\Element\Template->fetchView('/var/www/html/M...')
+#3 /var/www/html/Magento213/vendor/magento/framework/View/Element/AbstractBlock.php(659): Magento\Framework\View\Element\Template->_toHtml()
+#4 /var/www/html/Magento213/vendor/magento/module-email/Model/Template/Filter.php(404): Magento\Framework\View\Element\AbstractBlock->toHtml()
+#5 [internal function]: Magento\Email\Model\Template\Filter->blockDirective(Array)
+#6 /var/www/html/Magento213/vendor/magen in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml on line 23
+[26-Jun-2018 12:18:19 UTC] PHP Fatal error:  Uncaught Error: Class 'Mage' not found in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml:23
+Stack trace:
+#0 /var/www/html/Magento213/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
+#1 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(255): Magento\Framework\View\TemplateEngine\Php->render(Object(OpenCert\Helloworld\Block\Helloworld), '/var/www/html/M...', Array)
+#2 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(279): Magento\Framework\View\Element\Template->fetchView('/var/www/html/M...')
+#3 /var/www/html/Magento213/vendor/magento/framework/View/Element/AbstractBlock.php(659): Magento\Framework\View\Element\Template->_toHtml()
+#4 /var/www/html/Magento213/vendor/magento/module-email/Model/Template/Filter.php(404): Magento\Framework\View\Element\AbstractBlock->toHtml()
+#5 [internal function]: Magento\Email\Model\Template\Filter->blockDirective(Array)
+#6 /var/www/html/Magento213/vendor/magen in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml on line 23
+[26-Jun-2018 12:18:20 UTC] PHP Fatal error:  Uncaught Error: Class 'Mage' not found in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml:23
+Stack trace:
+#0 /var/www/html/Magento213/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
+#1 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(255): Magento\Framework\View\TemplateEngine\Php->render(Object(OpenCert\Helloworld\Block\Helloworld), '/var/www/html/M...', Array)
+#2 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(279): Magento\Framework\View\Element\Template->fetchView('/var/www/html/M...')
+#3 /var/www/html/Magento213/vendor/magento/framework/View/Element/AbstractBlock.php(659): Magento\Framework\View\Element\Template->_toHtml()
+#4 /var/www/html/Magento213/vendor/magento/module-email/Model/Template/Filter.php(404): Magento\Framework\View\Element\AbstractBlock->toHtml()
+#5 [internal function]: Magento\Email\Model\Template\Filter->blockDirective(Array)
+#6 /var/www/html/Magento213/vendor/magen in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml on line 23
+[26-Jun-2018 12:20:46 UTC] PHP Fatal error:  Uncaught Error: Class 'Mage' not found in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml:23
+Stack trace:
+#0 /var/www/html/Magento213/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
+#1 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(255): Magento\Framework\View\TemplateEngine\Php->render(Object(OpenCert\Helloworld\Block\Helloworld), '/var/www/html/M...', Array)
+#2 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(279): Magento\Framework\View\Element\Template->fetchView('/var/www/html/M...')
+#3 /var/www/html/Magento213/vendor/magento/framework/View/Element/AbstractBlock.php(659): Magento\Framework\View\Element\Template->_toHtml()
+#4 /var/www/html/Magento213/vendor/magento/module-email/Model/Template/Filter.php(404): Magento\Framework\View\Element\AbstractBlock->toHtml()
+#5 [internal function]: Magento\Email\Model\Template\Filter->blockDirective(Array)
+#6 /var/www/html/Magento213/vendor/magen in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml on line 23
+[26-Jun-2018 12:22:47 UTC] PHP Warning:  Uncaught Exception: Warning: require_once(./app/Mage.php): failed to open stream: No such file or directory in /var/www/html/Magento213/app/code/OpenCert/Helloworld/Block/HelloWorld.php on line 3 in /var/www/html/Magento213/vendor/magento/framework/App/ErrorHandler.php:61
+Stack trace:
+#0 /var/www/html/Magento213/app/code/OpenCert/Helloworld/Block/HelloWorld.php(3): Magento\Framework\App\ErrorHandler->handler(2, 'require_once(./...', '/var/www/html/M...', 3, Array)
+#1 /var/www/html/Magento213/app/code/OpenCert/Helloworld/Block/HelloWorld.php(3): require_once()
+#2 /var/www/html/Magento213/vendor/composer/ClassLoader.php(412): include('/var/www/html/M...')
+#3 /var/www/html/Magento213/vendor/composer/ClassLoader.php(301): Composer\Autoload\includeFile('/var/www/html/M...')
+#4 [internal function]: Composer\Autoload\ClassLoader->loadClass('OpenCert\\Hellow...')
+#5 [internal function]: spl_autoload_call('OpenCert\\Hellow...')
+#6 /var/www/html/Magento213/vendor/magento/framework/ObjectManager/Relations/Runtime.php(38 in /var/www/html/Magento213/vendor/magento/framework/App/ErrorHandler.php on line 61
+[26-Jun-2018 12:22:47 UTC] PHP Fatal error:  main(): Failed opening required './app/Mage.php' (include_path='/var/www/html/Magento213/var/generation:/var/www/html/Magento213/var/generation:/var/www/html/Magento213/vendor/magento/zendframework1/library:/var/www/html/Magento213/vendor/phpunit/php-file-iterator:/var/www/html/Magento213/vendor/phpunit/phpunit:/var/www/html/Magento213/vendor/symfony/yaml:.:/usr/share/php') in /var/www/html/Magento213/app/code/OpenCert/Helloworld/Block/HelloWorld.php on line 3
+[27-Jun-2018 04:36:18 UTC] PHP Fatal error:  Uncaught RuntimeException: Can't create directory /var/www/html/Magento213/var/generation/Magento/Directory/Helper/Data/. in /var/www/html/Magento213/vendor/magento/framework/Code/Generator.php:115
+Stack trace:
+#0 /var/www/html/Magento213/vendor/magento/framework/Code/Generator/Autoloader.php(35): Magento\Framework\Code\Generator->generateClass('Magento\\Directo...')
+#1 [internal function]: Magento\Framework\Code\Generator\Autoloader->load('Magento\\Directo...')
+#2 [internal function]: spl_autoload_call('Magento\\Directo...')
+#3 /var/www/html/Magento213/vendor/magento/framework/ObjectManager/Relations/Runtime.php(38): class_exists('Magento\\Directo...')
+#4 /var/www/html/Magento213/vendor/magento/framework/Interception/Config/Config.php(153): Magento\Framework\ObjectManager\Relations\Runtime->has('Magento\\Directo...')
+#5 /var/www/html/Magento213/vendor/magento/framework/Interception/Config/Config.php(147): Magento\Framework\Interception\Config\Config->_inheritInterception('Magento\\Directo...')
+#6 /var/www/ht in /var/www/html/Magento213/vendor/magento/framework/Code/Generator.php on line 115
+[28-Jun-2018 02:28:29 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getId() on null in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml:29
+Stack trace:
+#0 /var/www/html/Magento213/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
+#1 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(255): Magento\Framework\View\TemplateEngine\Php->render(Object(OpenCert\Helloworld\Block\Helloworld), '/var/www/html/M...', Array)
+#2 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(279): Magento\Framework\View\Element\Template->fetchView('/var/www/html/M...')
+#3 /var/www/html/Magento213/vendor/magento/framework/View/Element/AbstractBlock.php(659): Magento\Framework\View\Element\Template->_toHtml()
+#4 /var/www/html/Magento213/vendor/magento/module-email/Model/Template/Filter.php(404): Magento\Framework\View\Element\AbstractBlock->toHtml()
+#5 [internal function]: Magento\Email\Model\Template\Filter->blockDirective(Array)
+#6 /var/www/html/Mage in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml on line 29
+[28-Jun-2018 04:24:32 UTC] PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/var/www/html/Magento213/var/log/debug.log" could not be opened: failed to open stream: Permission denied in /var/www/html/Magento213/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:87
+Stack trace:
+#0 /var/www/html/Magento213/vendor/magento/framework/Logger/Handler/Base.php(60): Monolog\Handler\StreamHandler->write(Array)
+#1 /var/www/html/Magento213/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Magento\Framework\Logger\Handler\Base->write(Array)
+#2 /var/www/html/Magento213/vendor/monolog/monolog/src/Monolog/Logger.php(289): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#3 /var/www/html/Magento213/vendor/magento/framework/Logger/Monolog.php(24): Monolog\Logger->addRecord(100, 'cache_invalidat...', Array)
+#4 /var/www/html/Magento213/vendor/monolog/monolog/src/Monolog/Logger.php(481): Magento\Framework\Logger\Monolog->addRecord(100, 'cache_invalidat...', Array)
+#5 /var/www/html/Magento213/vendor/magento in /var/www/html/Magento213/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php on line 87
+[28-Jun-2018 10:42:29 UTC] PHP Fatal error:  Uncaught RuntimeException: Can't create directory /var/www/html/Magento213/var/generation/Magento/Directory/Helper/Data/. in /var/www/html/Magento213/vendor/magento/framework/Code/Generator.php:115
+Stack trace:
+#0 /var/www/html/Magento213/vendor/magento/framework/Code/Generator/Autoloader.php(35): Magento\Framework\Code\Generator->generateClass('Magento\\Directo...')
+#1 [internal function]: Magento\Framework\Code\Generator\Autoloader->load('Magento\\Directo...')
+#2 [internal function]: spl_autoload_call('Magento\\Directo...')
+#3 /var/www/html/Magento213/vendor/magento/framework/ObjectManager/Relations/Runtime.php(38): class_exists('Magento\\Directo...')
+#4 /var/www/html/Magento213/vendor/magento/framework/Interception/Config/Config.php(153): Magento\Framework\ObjectManager\Relations\Runtime->has('Magento\\Directo...')
+#5 /var/www/html/Magento213/vendor/magento/framework/Interception/Config/Config.php(147): Magento\Framework\Interception\Config\Config->_inheritInterception('Magento\\Directo...')
+#6 /var/www/ht in /var/www/html/Magento213/vendor/magento/framework/Code/Generator.php on line 115

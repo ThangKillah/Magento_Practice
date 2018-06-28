@@ -1,0 +1,33 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+                <argument name="logo_img_width" xsi:type="number">204</argument>
+                <argument name="logo_img_height" xsi:type="number">76</argument>
+            </arguments>
+        </referenceBlock>
+
+        <referenceBlock name="advanced-search-link" remove="true">
+        </referenceBlock>
+
+        <referenceBlock name="category.image" remove="true">
+        </referenceBlock>
+
+        <!-- them block moi' -->
+        <block class="OpenCert\Helloworld\Block\HelloWorld"  
+            template="OpenCert_Helloworld::helloworld.phtml" name="helloworld">    
+        </block>
+
+
+       <!--  <move element="helloworld" destination="product.info.stock.sku"  before="-"/> -->
+        <move element="page.main.title" destination="content.top" />
+        <move element="category.description" destination="content.top" />
+        <move element="catalog.product.related" destination="content" 
+              before="product.info.details"/>
+       
+
+
+        <move element="helloworld" destination="div.sidebar.additional"  before="-"/>
+    </body>
+</page>
