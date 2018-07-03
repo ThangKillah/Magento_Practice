@@ -80,14 +80,7 @@
             "url": "https://repo.magento.com/"
         }
     ],
-
-    "repositories": [
-        {
-         "type": "vcs",
-         "url": "git@github.com:magento-hackathon/magento2-plugin-visualization.git"
-        }
-    ],
-    
+        
     "extra": {
         "magento-force": "override"
     }
