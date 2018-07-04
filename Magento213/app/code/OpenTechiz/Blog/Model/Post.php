@@ -3,7 +3,9 @@ namespace OpenTechiz\Blog\Model;
 
 class Post  extends \Magento\Framework\Model\AbstractModel
 {
-
+    /**#@+
+     * Post's Statuses
+     */
     const STATUS_ENABLED = 1;
     const STATUS_DISABLED = 0;
 
