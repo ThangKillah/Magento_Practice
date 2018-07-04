@@ -355,3 +355,86 @@ Stack trace:
 #5 /var/www/html/Magento213/vendor/magento/framework/Interception/Config/Config.php(147): Magento\Framework\Interception\Config\Config->_inheritInterception('Magento\\Directo...')
 #6 /var/www/ht in /var/www/html/Magento213/vendor/magento/framework/Code/Generator.php on line 115
 [03-Jul-2018 07:21:32 UTC] PHP Parse error:  syntax error, unexpected 'print_r' (T_STRING), expecting ',' or ';' in /var/www/html/Magento213/app/code/TestPlugin/InjectVariablesIntoBlocks/view/frontend/templates/absolute_footer.phtml on line 20
+[03-Jul-2018 08:53:16 UTC] PHP Fatal error:  Uncaught RuntimeException: Can't create directory /var/www/html/Magento213/var/generation/Magento/Directory/Helper/Data/. in /var/www/html/Magento213/vendor/magento/framework/Code/Generator.php:115
+Stack trace:
+#0 /var/www/html/Magento213/vendor/magento/framework/Code/Generator/Autoloader.php(35): Magento\Framework\Code\Generator->generateClass('Magento\\Directo...')
+#1 [internal function]: Magento\Framework\Code\Generator\Autoloader->load('Magento\\Directo...')
+#2 [internal function]: spl_autoload_call('Magento\\Directo...')
+#3 /var/www/html/Magento213/vendor/magento/framework/ObjectManager/Relations/Runtime.php(38): class_exists('Magento\\Directo...')
+#4 /var/www/html/Magento213/vendor/magento/framework/Interception/Config/Config.php(153): Magento\Framework\ObjectManager\Relations\Runtime->has('Magento\\Directo...')
+#5 /var/www/html/Magento213/vendor/magento/framework/Interception/Config/Config.php(147): Magento\Framework\Interception\Config\Config->_inheritInterception('Magento\\Directo...')
+#6 /var/www/ht in /var/www/html/Magento213/vendor/magento/framework/Code/Generator.php on line 115
+[03-Jul-2018 08:57:44 UTC] PHP Fatal error:  Uncaught TypeError: Argument 4 passed to OpenCert\Helloworld\Controller\Index\Index::__construct() must be an instance of TestRewriteClass\Cms\Model\Page, instance of Magento\Cms\Model\Page given, called in /var/www/html/Magento213/var/generation/OpenCert/Helloworld/Controller/Index/Index/Interceptor.php on line 14 and defined in /var/www/html/Magento213/app/code/OpenCert/Helloworld/Controller/Index/Index.php:13
+Stack trace:
+#0 /var/www/html/Magento213/var/generation/OpenCert/Helloworld/Controller/Index/Index/Interceptor.php(14): OpenCert\Helloworld\Controller\Index\Index->__construct(Object(Magento\Framework\App\Action\Context), Object(Magento\Framework\View\Result\PageFactory), Object(Magento\Framework\Registry), Object(Magento\Cms\Model\Page))
+#1 /var/www/html/Magento213/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(111): OpenCert\Helloworld\Controller\Index\Index\Interceptor->__construct(Object(Magento\Framework\App\Action\Context), Object(Magento\Framework\View\Result\PageFactory), O in /var/www/html/Magento213/app/code/OpenCert/Helloworld/Controller/Index/Index.php on line 13
+[03-Jul-2018 09:04:23 UTC] PHP Fatal error:  Uncaught TypeError: Argument 4 passed to OpenCert\Helloworld\Controller\Index\Index::__construct() must be an instance of TestRewriteClass\Cms\Model\Page, instance of Magento\Cms\Model\Page given, called in /var/www/html/Magento213/var/generation/OpenCert/Helloworld/Controller/Index/Index/Interceptor.php on line 14 and defined in /var/www/html/Magento213/app/code/OpenCert/Helloworld/Controller/Index/Index.php:13
+Stack trace:
+#0 /var/www/html/Magento213/var/generation/OpenCert/Helloworld/Controller/Index/Index/Interceptor.php(14): OpenCert\Helloworld\Controller\Index\Index->__construct(Object(Magento\Framework\App\Action\Context), Object(Magento\Framework\View\Result\PageFactory), Object(Magento\Framework\Registry), Object(Magento\Cms\Model\Page))
+#1 /var/www/html/Magento213/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(111): OpenCert\Helloworld\Controller\Index\Index\Interceptor->__construct(Object(Magento\Framework\App\Action\Context), Object(Magento\Framework\View\Result\PageFactory), O in /var/www/html/Magento213/app/code/OpenCert/Helloworld/Controller/Index/Index.php on line 13
+[03-Jul-2018 09:06:49 UTC] PHP Fatal error:  Uncaught TypeError: Argument 4 passed to OpenCert\Helloworld\Controller\Index\Index::__construct() must be an instance of TestRewriteClass\Cms\Model\Page, instance of Magento\Cms\Model\Page given, called in /var/www/html/Magento213/var/generation/OpenCert/Helloworld/Controller/Index/Index/Interceptor.php on line 14 and defined in /var/www/html/Magento213/app/code/OpenCert/Helloworld/Controller/Index/Index.php:13
+Stack trace:
+#0 /var/www/html/Magento213/var/generation/OpenCert/Helloworld/Controller/Index/Index/Interceptor.php(14): OpenCert\Helloworld\Controller\Index\Index->__construct(Object(Magento\Framework\App\Action\Context), Object(Magento\Framework\View\Result\PageFactory), Object(Magento\Framework\Registry), Object(Magento\Cms\Model\Page))
+#1 /var/www/html/Magento213/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(111): OpenCert\Helloworld\Controller\Index\Index\Interceptor->__construct(Object(Magento\Framework\App\Action\Context), Object(Magento\Framework\View\Result\PageFactory), O in /var/www/html/Magento213/app/code/OpenCert/Helloworld/Controller/Index/Index.php on line 13
+[03-Jul-2018 09:06:51 UTC] PHP Fatal error:  Uncaught TypeError: Argument 4 passed to OpenCert\Helloworld\Controller\Index\Index::__construct() must be an instance of TestRewriteClass\Cms\Model\Page, instance of Magento\Cms\Model\Page given, called in /var/www/html/Magento213/var/generation/OpenCert/Helloworld/Controller/Index/Index/Interceptor.php on line 14 and defined in /var/www/html/Magento213/app/code/OpenCert/Helloworld/Controller/Index/Index.php:13
+Stack trace:
+#0 /var/www/html/Magento213/var/generation/OpenCert/Helloworld/Controller/Index/Index/Interceptor.php(14): OpenCert\Helloworld\Controller\Index\Index->__construct(Object(Magento\Framework\App\Action\Context), Object(Magento\Framework\View\Result\PageFactory), Object(Magento\Framework\Registry), Object(Magento\Cms\Model\Page))
+#1 /var/www/html/Magento213/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(111): OpenCert\Helloworld\Controller\Index\Index\Interceptor->__construct(Object(Magento\Framework\App\Action\Context), Object(Magento\Framework\View\Result\PageFactory), O in /var/www/html/Magento213/app/code/OpenCert/Helloworld/Controller/Index/Index.php on line 13
+[03-Jul-2018 09:06:52 UTC] PHP Fatal error:  Uncaught TypeError: Argument 4 passed to OpenCert\Helloworld\Controller\Index\Index::__construct() must be an instance of TestRewriteClass\Cms\Model\Page, instance of Magento\Cms\Model\Page given, called in /var/www/html/Magento213/var/generation/OpenCert/Helloworld/Controller/Index/Index/Interceptor.php on line 14 and defined in /var/www/html/Magento213/app/code/OpenCert/Helloworld/Controller/Index/Index.php:13
+Stack trace:
+#0 /var/www/html/Magento213/var/generation/OpenCert/Helloworld/Controller/Index/Index/Interceptor.php(14): OpenCert\Helloworld\Controller\Index\Index->__construct(Object(Magento\Framework\App\Action\Context), Object(Magento\Framework\View\Result\PageFactory), Object(Magento\Framework\Registry), Object(Magento\Cms\Model\Page))
+#1 /var/www/html/Magento213/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(111): OpenCert\Helloworld\Controller\Index\Index\Interceptor->__construct(Object(Magento\Framework\App\Action\Context), Object(Magento\Framework\View\Result\PageFactory), O in /var/www/html/Magento213/app/code/OpenCert/Helloworld/Controller/Index/Index.php on line 13
+[03-Jul-2018 09:07:09 UTC] PHP Fatal error:  Uncaught TypeError: Argument 4 passed to OpenCert\Helloworld\Controller\Index\Index::__construct() must be an instance of TestRewriteClass\Cms\Model\Page, instance of Magento\Cms\Model\Page given, called in /var/www/html/Magento213/var/generation/OpenCert/Helloworld/Controller/Index/Index/Interceptor.php on line 14 and defined in /var/www/html/Magento213/app/code/OpenCert/Helloworld/Controller/Index/Index.php:13
+Stack trace:
+#0 /var/www/html/Magento213/var/generation/OpenCert/Helloworld/Controller/Index/Index/Interceptor.php(14): OpenCert\Helloworld\Controller\Index\Index->__construct(Object(Magento\Framework\App\Action\Context), Object(Magento\Framework\View\Result\PageFactory), Object(Magento\Framework\Registry), Object(Magento\Cms\Model\Page))
+#1 /var/www/html/Magento213/vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php(111): OpenCert\Helloworld\Controller\Index\Index\Interceptor->__construct(Object(Magento\Framework\App\Action\Context), Object(Magento\Framework\View\Result\PageFactory), O in /var/www/html/Magento213/app/code/OpenCert/Helloworld/Controller/Index/Index.php on line 13
+[03-Jul-2018 09:30:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Magento\Catalog\Api\ProductRepositoryInterface::getInstance() in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml:33
+Stack trace:
+#0 /var/www/html/Magento213/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
+#1 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(255): Magento\Framework\View\TemplateEngine\Php->render(Object(OpenCert\Helloworld\Block\Helloworld), '/var/www/html/M...', Array)
+#2 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(279): Magento\Framework\View\Element\Template->fetchView('/var/www/html/M...')
+#3 /var/www/html/Magento213/vendor/magento/framework/View/Element/AbstractBlock.php(659): Magento\Framework\View\Element\Template->_toHtml()
+#4 /var/www/html/Magento213/vendor/magento/framework/View/Layout.php(542): Magento\Framework\View\Element\AbstractBlock->toHtml()
+#5 /var/www/html/Magento213/vendor/magento/framework/View/Layout.php(518 in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml on line 33
+[03-Jul-2018 09:35:34 UTC] PHP Parse error:  syntax error, unexpected '$productRepository' (T_VARIABLE) in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml on line 33
+[03-Jul-2018 09:44:21 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getName() on string in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml:40
+Stack trace:
+#0 /var/www/html/Magento213/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
+#1 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(255): Magento\Framework\View\TemplateEngine\Php->render(Object(OpenCert\Helloworld\Block\Helloworld), '/var/www/html/M...', Array)
+#2 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(279): Magento\Framework\View\Element\Template->fetchView('/var/www/html/M...')
+#3 /var/www/html/Magento213/vendor/magento/framework/View/Element/AbstractBlock.php(659): Magento\Framework\View\Element\Template->_toHtml()
+#4 /var/www/html/Magento213/vendor/magento/framework/View/Layout.php(542): Magento\Framework\View\Element\AbstractBlock->toHtml()
+#5 /var/www/html/Magento213/vendor/magento/framework/View/Layout.php(518): Magento\Framework\View\Layout->_render in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml on line 40
+[03-Jul-2018 09:44:50 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getName() on string in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml:40
+Stack trace:
+#0 /var/www/html/Magento213/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
+#1 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(255): Magento\Framework\View\TemplateEngine\Php->render(Object(OpenCert\Helloworld\Block\Helloworld), '/var/www/html/M...', Array)
+#2 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(279): Magento\Framework\View\Element\Template->fetchView('/var/www/html/M...')
+#3 /var/www/html/Magento213/vendor/magento/framework/View/Element/AbstractBlock.php(659): Magento\Framework\View\Element\Template->_toHtml()
+#4 /var/www/html/Magento213/vendor/magento/framework/View/Layout.php(542): Magento\Framework\View\Element\AbstractBlock->toHtml()
+#5 /var/www/html/Magento213/vendor/magento/framework/View/Layout.php(518): Magento\Framework\View\Layout->_render in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml on line 40
+[03-Jul-2018 09:44:53 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getName() on string in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml:40
+Stack trace:
+#0 /var/www/html/Magento213/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
+#1 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(255): Magento\Framework\View\TemplateEngine\Php->render(Object(OpenCert\Helloworld\Block\Helloworld), '/var/www/html/M...', Array)
+#2 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(279): Magento\Framework\View\Element\Template->fetchView('/var/www/html/M...')
+#3 /var/www/html/Magento213/vendor/magento/framework/View/Element/AbstractBlock.php(659): Magento\Framework\View\Element\Template->_toHtml()
+#4 /var/www/html/Magento213/vendor/magento/framework/View/Layout.php(542): Magento\Framework\View\Element\AbstractBlock->toHtml()
+#5 /var/www/html/Magento213/vendor/magento/framework/View/Layout.php(518): Magento\Framework\View\Layout->_render in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml on line 40
+[03-Jul-2018 09:44:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getName() on string in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml:40
+Stack trace:
+#0 /var/www/html/Magento213/vendor/magento/framework/View/TemplateEngine/Php.php(59): include()
+#1 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(255): Magento\Framework\View\TemplateEngine\Php->render(Object(OpenCert\Helloworld\Block\Helloworld), '/var/www/html/M...', Array)
+#2 /var/www/html/Magento213/vendor/magento/framework/View/Element/Template.php(279): Magento\Framework\View\Element\Template->fetchView('/var/www/html/M...')
+#3 /var/www/html/Magento213/vendor/magento/framework/View/Element/AbstractBlock.php(659): Magento\Framework\View\Element\Template->_toHtml()
+#4 /var/www/html/Magento213/vendor/magento/framework/View/Layout.php(542): Magento\Framework\View\Element\AbstractBlock->toHtml()
+#5 /var/www/html/Magento213/vendor/magento/framework/View/Layout.php(518): Magento\Framework\View\Layout->_render in /var/www/html/Magento213/app/code/OpenCert/Helloworld/view/frontend/templates/helloworld.phtml on line 40
+[03-Jul-2018 10:31:08 UTC] PHP Fatal error:  Uncaught RuntimeException: Can't create directory /var/www/html/Magento213/var/generation/Magento/Directory/Helper/Data/. in /var/www/html/Magento213/vendor/magento/framework/Code/Generator.php:115
+Stack trace:
+#0 /var/www/html/Magento213/vendor/magento/framework/Code/Generator/Autoloader.php(35): Magento\Framework\Code\Generator->generateClass('Magento\\Directo...')
+#1 [internal function]: Magento\Framework\Code\Generator\Autoloader->load('Magento\\Directo...')
+#2 [internal function]: spl_autoload_call('Magento\\Directo...')
+#3 /var/www/html/Magento213/vendor/magento/framework/ObjectManager/Relations/Runtime.php(38): class_exists('Magento\\Directo...')
+#4 /var/www/html/Magento213/vendor/magento/framework/Interception/Config/Config.php(153): Magento\Framework\ObjectManager\Relations\Runtime->has('Magento\\Directo...')
+#5 /var/www/html/Magento213/vendor/magento/framework/Interception/Config/Config.php(147): Magento\Framework\Interception\Config\Config->_inheritInterception('Magento\\Directo...')
+#6 /var/www/ht in /var/www/html/Magento213/vendor/magento/framework/Code/Generator.php on line 115

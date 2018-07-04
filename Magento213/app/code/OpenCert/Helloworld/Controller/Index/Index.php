@@ -8,8 +8,11 @@ class Index extends \Magento\Framework\App\Action\Action
 {
     protected $_resultPageFactory;
     protected $_registry;
- 
-    public function __construct(Context $context, \Magento\Framework\View\Result\PageFactory $resultPageFactory, \Magento\Framework\Registry $registry)
+
+    public function __construct(Context $context,
+                                \Magento\Framework\View\Result\PageFactory $resultPageFactory,
+                                \Magento\Framework\Registry $registry
+)
     {
         $this->_resultPageFactory = $resultPageFactory;
         $this->_registry = $registry;
@@ -24,12 +27,12 @@ class Index extends \Magento\Framework\App\Action\Action
 
         $resultPage = $this->_resultPageFactory->create();
 
-            echo '<pre>';
-            $debugBackTrace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS);
-            foreach ($debugBackTrace as $item) {
-                echo @$item['class'] . @$item['type'] . @$item['function'] . "\n";
-            }
-             die();
+//            echo '<pre>';
+//            $debugBackTrace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS);
+//            foreach ($debugBackTrace as $item) {
+//                echo @$item['class'] . @$item['type'] . @$item['function'] . "\n";
+//            }
+//             die();
 
         // $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
         // $productCollection = $objectManager->create('Magento\Catalog\Model\ResourceModel\Product\Collection');
@@ -41,4 +44,5 @@ class Index extends \Magento\Framework\App\Action\Action
 
         return $resultPage;
     }
+    
 }
