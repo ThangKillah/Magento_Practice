@@ -36,4 +36,5 @@ class CommentList extends \Magento\Framework\View\Element\Template
 
         return $this->getData('comments');
     }
+    
 }

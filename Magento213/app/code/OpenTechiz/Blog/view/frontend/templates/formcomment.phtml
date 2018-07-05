@@ -1,0 +1,11 @@
+<h1>Booking page</h1>
+
+<form action="<?php echo $block->getFormAction() ?>" method="post">
+    <input name="content" type="text">
+    <br><br><br><br>
+    <input type="submit" value="Send Comment">
+    <br><br><br><br>
+    <input type="hidden" name="post_id" value="<?php echo $block->getPostID() ?>"/>
+    <input type="hidden" name="user_id" value="<?php echo $block->getUserId() ?>"/>
+
+</form>

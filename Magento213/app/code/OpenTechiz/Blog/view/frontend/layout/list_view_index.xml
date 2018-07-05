@@ -2,8 +2,12 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content">
-            <block class="OpenTechiz\Blog\Block\PostView" name="blog" template="OpenTechiz_Blog::view.phtml" />
-            <block class="OpenTechiz\Blog\Block\CommentList" name="comments" template="OpenTechiz_Blog::comments.phtml" />
+            <block class="OpenTechiz\Blog\Block\PostView" name="blog"
+                   template="OpenTechiz_Blog::view.phtml" />
+            <block class="OpenTechiz\Blog\Block\CommentForm" name="form.comments"
+                   template="OpenTechiz_Blog::formcomment.phtml" />
+            <block class="OpenTechiz\Blog\Block\CommentList" name="comments"
+                   template="OpenTechiz_Blog::comments.phtml" />
         </referenceContainer>
     </body>
 </page>
