@@ -24,7 +24,6 @@ class Index extends Action
     public function execute()
     {
         $post_id = $this->getRequest()->getParam('post_id', $this->getRequest()->getParam('id', false));
-        /** @var \OpenTechiz\Blog\Helper\Post $post_helper */
         //echo $post_id;die();
         $post_helper = $this->_objectManager->get('OpenTechiz\Blog\Helper\Post');
         $result_page = $post_helper->prepareResultPost($this, $post_id);

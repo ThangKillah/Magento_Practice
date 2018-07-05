@@ -3,6 +3,7 @@
     <body>
         <referenceContainer name="content">
             <block class="OpenTechiz\Blog\Block\PostView" name="blog" template="OpenTechiz_Blog::view.phtml" />
+            <block class="OpenTechiz\Blog\Block\CommentList" name="comments" template="OpenTechiz_Blog::comments.phtml" />
         </referenceContainer>
     </body>
 </page>

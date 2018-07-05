@@ -24,4 +24,6 @@ interface PostInterface
     public function setCreationTime($creationTime);
     public function setUpdateTime($updateTime);
     public function setIsActive($isActive);
+
+    
 }
