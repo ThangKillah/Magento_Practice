@@ -34,7 +34,7 @@ class Save extends \Magento\Backend\App\Action
         /** @var \Magento\Backend\Model\View\Result\Redirect $resultRedirect */
         $resultRedirect = $this->resultRedirectFactory->create();
         if ($data) {
-            /** @var \Ashsmith\Blog\Model\Post $model */
+            /** @var \OpenTechiz\Blog\Model\Post $model */
             $model = $this->_objectManager->create('OpenTechiz\Blog\Model\Post');
 
             $id = $this->getRequest()->getParam('post_id');
