@@ -9,14 +9,22 @@ class Save extends \Magento\Framework\App\Action\Action
 {
     protected $resultJsonFactory; 
      protected $_inlineTranslation;
+     protected $_transportBuilder;
+     protected $scopeConfig;
+
 
     public function __construct(Context $context , 
                                JsonFactory $resultJsonFactory,
-                               \Magento\Framework\Translate\Inline\StateInterface $inlineTranslation
+                               \Magento\Framework\Translate\Inline\StateInterface $inlineTranslation,
+                               \Magento\Framework\Mail\Template\TransportBuilder $transportBuilder,
+                               \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
     )
     {
         $this->_inlineTranslation = $inlineTranslation;
         $this->resultJsonFactory = $resultJsonFactory;
+        $this->_transportBuilder = $transportBuilder;
+        $this->scopeConfig = $scopeConfig;
+
         return parent::__construct($context);
     }
 
@@ -75,6 +83,25 @@ class Save extends \Magento\Framework\App\Action\Action
             $comment->save();
 
             $result->setData(['result' => 'success', 'message' => $message]);
+
+
+
+            //send email to user 
+            $sender = array('email' => "vietnga1910@gmail.com", 'name' => 'Mywebsite');
+
+            $storeScope = \Magento\Store\Model\ScopeInterface::SCOPE_STORE;
+            $transport = $this->_transportBuilder->setTemplateIdentifier($this->scopeConfig->getValue('blog/general/template', $storeScope))
+            ->setTemplateOptions(
+                    [
+                            'area' =>  \Magento\Framework\App\Area::AREA_FRONTEND,
+                            'store' => \Magento\Store\Model\Store::DEFAULT_STORE_ID,
+                    ]
+                    )
+                    ->setTemplateVars(['name' => $postData['content']])
+                    ->setFrom($sender)
+                    ->addTo($postData['email']) //send to 
+                    ->getTransport()
+                    ->sendMessage();
         }
 
 

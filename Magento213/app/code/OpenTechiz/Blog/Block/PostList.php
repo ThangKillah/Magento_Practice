@@ -7,13 +7,16 @@ use OpenTechiz\Blog\Model\ResourceModel\Post\Collection as PostCollection;
 class PostList extends \Magento\Framework\View\Element\Template
 {
     protected $_postCollecionFactory;
+    protected $scopeConfig;
 
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
         \OpenTechiz\Blog\Model\ResourceModel\Post\CollectionFactory $postCollectionfactory,
+         \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig ,
         array $data = [])
     {
         parent::__construct($context, $data);
+        $this->_scopeConfig = $scopeConfig;
         $this->_postCollecionFactory = $postCollectionfactory;
     }
 
@@ -31,5 +34,13 @@ class PostList extends \Magento\Framework\View\Element\Template
         }
 
         return $this->getData('posts');
+    }
+
+     public function getStoreEmail()
+    {
+        return $this->_scopeConfig->getValue(
+            'trans_email/ident_sales/email',
+            \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+        );
     }
 }
