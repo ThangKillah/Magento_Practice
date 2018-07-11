@@ -126,7 +126,7 @@ class AbstractMassStatus extends \Magento\Backend\App\Action
             /** @var \Magento\Framework\Model\AbstractModel $model */
             $model = $this->_objectManager->get($this->model);
             $model->load($id);
-            $model->setIsActive($this->status);
+            $model->setStatus($this->status);
             $model->save();
         }
     }

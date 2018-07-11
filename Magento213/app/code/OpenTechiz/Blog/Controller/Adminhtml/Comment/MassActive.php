@@ -1,15 +1,15 @@
 <?php
-namespace OpenTechiz\Blog\Controller\Adminhtml\Post;
+namespace OpenTechiz\Blog\Controller\Adminhtml\Comment;
 
 use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
-use OpenTechiz\Blog\Model\ResourceModel\Post\CollectionFactory;
+use OpenTechiz\Blog\Model\ResourceModel\Comment\CollectionFactory;
 use Magento\Framework\Controller\ResultFactory;
 
 /**
  * Class MassDisable
  */
-class MassDisable  extends \Magento\Backend\App\Action
+class MassActive extends \Magento\Backend\App\Action
 {
     /**
      * @var Filter
@@ -44,7 +44,7 @@ class MassDisable  extends \Magento\Backend\App\Action
         $collection = $this->filter->getCollection($this->collectionFactory->create());
 
         foreach ($collection as $item) {
-            $item->setStatus(0);
+            $item->setStatus(1);
             $item->save();
         }
 
