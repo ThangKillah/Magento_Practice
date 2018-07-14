@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3a6f352be7638855c030c353e84650cb",
-    "content-hash": "55b851b8243e7db49b3a4446b522f81a",
+    "hash": "377d33f53fbb8b1606eb4ffaa4b45be2",
+    "content-hash": "13f9617a02cac000375b0f12cc065d24",
     "packages": [
         {
             "name": "braintree/braintree_php",
@@ -668,11 +668,6 @@
         {
             "name": "magento/composer",
             "version": "1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/magento/composer.git",
-                "reference": "b53f7c8a037860b467083e94de7c17cfd323e365"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/magento/composer/zipball/b53f7c8a037860b467083e94de7c17cfd323e365",
@@ -6167,6 +6162,61 @@
                 "framework"
             ],
             "time": "2017-02-27 21:19:07"
+        },
+        {
+            "name": "magepal/magento2-gmailsmtpapp",
+            "version": "2.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/magepal/magento2-gmail-smtp-app.git",
+                "reference": "cbb06da6e4d7fd4fc50502da8497435730f33423"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/magepal/magento2-gmail-smtp-app/zipball/cbb06da6e4d7fd4fc50502da8497435730f33423",
+                "reference": "cbb06da6e4d7fd4fc50502da8497435730f33423",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "100.0.*|100.1.*|101.0.*",
+                "magento/module-backend": "100.0.*|100.1.*|100.2.*",
+                "php": "~5.6.0|7.0.2|7.0.4|~7.0.6|~7.1.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "MagePal\\GmailSmtpApp\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Renon Stewart",
+                    "email": "renon@magepal.com",
+                    "homepage": "http://www.magepal.com/",
+                    "role": "Leader"
+                }
+            ],
+            "description": "Configure Magento 2 to send email using Google App, Gmail, Amazon Simple Email Service (SES), Microsoft Office365 and many other SMTP servers",
+            "homepage": "http://www.magepal.com/",
+            "keywords": [
+                "Amazon SES",
+                "Amazon Simple Email Service",
+                "gmail smtp",
+                "google app",
+                "magento 2",
+                "magento2 email",
+                "magento2 email setup",
+                "magento2 smtp",
+                "send email magento2"
+            ],
+            "time": "2018-03-30 15:57:46"
         },
         {
             "name": "mageplaza/magento-2-french-language-pack",

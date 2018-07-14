@@ -25,9 +25,12 @@
         <move element="category.description" destination="content.top" />
         <move element="catalog.product.related" destination="content" 
               before="product.info.details"/>
-       
-
-
         <move element="helloworld" destination="div.sidebar.additional"  before="-"/>
+
+        <block class="OpenTechiz\Blog\Block\Account\Customer"  
+            template="OpenTechiz_Blog::customer.phtml" name="customer">    
+        </block>
+
+        <move element="customer" destination="header.panel"  after="-"/>
     </body>
 </page>
