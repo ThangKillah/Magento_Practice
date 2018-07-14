@@ -1,7 +1,8 @@
 define([
     "jquery",
-    "jquery/ui"
-], function($){
+    "jquery/ui",
+    "loadcomment"
+], function($, jqueryUi, loadcomment){
     "use strict";
      
     function main(config, element) {
@@ -23,12 +24,13 @@ define([
                         data: param,
                         type: "POST"
                     }).done(function (data) {
-                        console.log(data);
+                        //console.log(data);
                         if(data.result == "success")
                         {
                             $('.note').html(data.message);
                             $('.note').css('color', 'green');
                             document.getElementById("contact-form").reset();
+                            loadcomment.loadComments(config);
                             return true;
                         }
                         else

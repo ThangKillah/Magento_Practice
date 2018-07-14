@@ -22,6 +22,10 @@ class CommentForm extends \Magento\Framework\View\Element\Template
         parent::__construct($context, $data);
     }
 
+    public function getAjaxUrl()
+    {
+        return '/Magento213/list/comment/load';
+    }
 
     public function getPostID()
     {

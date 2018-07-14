@@ -36,11 +36,4 @@ class PostList extends \Magento\Framework\View\Element\Template
         return $this->getData('posts');
     }
 
-     public function getStoreEmail()
-    {
-        return $this->_scopeConfig->getValue(
-            'trans_email/ident_sales/email',
-            \Magento\Store\Model\ScopeInterface::SCOPE_STORE
-        );
-    }
 }

@@ -1,12 +1,14 @@
-<h1>Booking page</h1>
+<h1>Form Comment</h1>
 
 <form action="<?php echo $block->getFormAction() ?>" 
       id="contact-form"
       method="post"
  >
+    <label>Content :</label>
     <input name="content" type="text">
     <br><br><br><br>
 
+    <label>Email :</label>
     <input name="email" type="text">
     <br><br><br><br>
 
@@ -24,7 +26,9 @@ $ajaxurl = $block->getFormAction();
         {
             "*": {
                 "OpenTechiz_Blog/js/commentajax": {
-                    "AjaxUrl": "<?php echo $ajaxurl; ?>"
+                    "AjaxUrl": "<?php echo $ajaxurl; ?>",
+                    "AjaxCommentLoadUrl": "<?php echo $block->getAjaxUrl() ?>",
+                    "AjaxPostId": "<?php echo $block->getPostID(); ?>"
                 }
             }
         }

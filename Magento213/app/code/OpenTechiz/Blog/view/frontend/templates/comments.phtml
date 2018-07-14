@@ -1,11 +1,11 @@
-<h1>Block Comment</h1>
+<h1>Block List Comment</h1>
 <?php
     $comments = $this->getComments();
     if(count($comments) > 0)
     {
         foreach($comments as $item )
         {
-            echo "<h1>".$item->getContent()."</h1>";
+            echo "<p>".$item->getContent()."</p>";
         }
     }
 

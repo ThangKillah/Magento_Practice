@@ -1,12 +1,13 @@
 <?php
 $post = $block->getPost();
 ?>
-<h1 class="blog-post-item-title"><?php echo $post->getTitle() ?></h1>
-<h1 class="blog-post-item-title"><?php echo $post->getContent() ?></h1>
+<h1>Detail Comment</h1>
+<h3 class="blog-post-item-title">Title : <?php echo $post->getTitle() ?></h3>
+<h3 class="blog-post-item-title">Content :<?php echo $post->getContent() ?></h3>
 
-<h1 class="blog-post-item-title"><?php echo $post->getUrlKey() ?></h1>
+<h3 class="blog-post-item-title">Url_Key: <?php echo $post->getUrlKey() ?></h3>
 <a href="<?php echo $post->getUrlKey() ?>">Linkk</a>
-<h1 class="blog-post-item-title"><?php echo $post->getCreatedAt() ?></h1>
+<h3 class="blog-post-item-title">Create_at :<?php echo $post->getCreatedAt() ?></h3>
 
 
 
