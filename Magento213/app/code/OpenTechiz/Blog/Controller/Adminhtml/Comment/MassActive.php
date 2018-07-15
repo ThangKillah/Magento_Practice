@@ -45,7 +45,6 @@ class MassActive extends \Magento\Backend\App\Action
 
 
         $this->_eventManager->dispatch('admin_active_comment', ['comments' => $collection]);
-        die('test');
 
 
         foreach ($collection as $item) {
