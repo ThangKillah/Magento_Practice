@@ -17,6 +17,7 @@ class CommentList extends \Magento\Framework\View\Element\Template
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
         \OpenTechiz\Blog\Model\ResourceModel\Comment\CollectionFactory $commentCollectionfactory,
+        \OpenTechiz\Blog\Model\NotificationFactory $notiFactory,
         array $data = [])
     {
         parent::__construct($context, $data);

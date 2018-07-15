@@ -1,39 +1,52 @@
 <?php
 namespace OpenTechiz\Blog\Block\Account;
 
-use OpenTechiz\Blog\Api\Data\PostInterface;
-use OpenTechiz\Blog\Model\ResourceModel\Post\Collection as PostCollection;
-
+use OpenTechiz\Blog\Api\Data\NotificationInterface;
+use OpenTechiz\Blog\Model\ResourceModel\Notification\Collection as NotificationCollection;
 class Customer extends \Magento\Framework\View\Element\Template
 {
-    protected $_postCollecionFactory;
-    protected $scopeConfig;
+  
+    protected $customerSession;
+    protected $_notiFactory;
+    protected $_notiCollectionFactory;
 
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
-        \OpenTechiz\Blog\Model\ResourceModel\Post\CollectionFactory $postCollectionfactory,
-         \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig ,
+        \Magento\Customer\Model\Session $customerSession,
+        \OpenTechiz\Blog\Model\ResourceModel\Notification\CollectionFactory $notiCollectionFactory,
+        \OpenTechiz\Blog\Model\NotificationFactory $notiFactory,
         array $data = [])
     {
         parent::__construct($context, $data);
-        $this->_scopeConfig = $scopeConfig;
-        $this->_postCollecionFactory = $postCollectionfactory;
+        $this->customerSession = $customerSession;
+        $this->_notiCollectionFactory = $notiCollectionFactory;
+        $this->_notiFactory = $notiFactory;
     }
 
-    public function getPost()
+    
+    public function checkLogin()
     {
-        if(!$this->hasData('posts'))
+        if($this->customerSession->isLoggedIn())
+            return 1;
+        else
+            return 0;
+    }
+
+    public function getNotification()
+    {
+
+        if(!$this->hasData('noti'))
         {
-            $posts = $this->_postCollecionFactory->create()
-                ->addFilter('status', 1)
-                ->addOrder(
-                    PostInterface::CREATION_TIME,
-                    PostCollection::SORT_ORDER_DESC
+            $user_id = $this->customerSession->getCustomer()->getId();
+            $noti = $this->_notiCollectionFactory->create()
+             ->addFilter('user_id', $user_id)
+             ->addOrder(
+                    NotificationInterface::CREATION_TIME,
+                    NotificationCollection::SORT_ORDER_DESC
                 );
-            $this->setData('posts', $posts);
+            $this->setData('noti', $noti);
         }
 
-        return $this->getData('posts');
+        return $this->getData('noti');
     }
-
 }

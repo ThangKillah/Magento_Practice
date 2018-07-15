@@ -1,9 +1,11 @@
+<?php if($block->checkLogin() == 1 ): ?>
+<?php $noti=$this->getNotification()?>
 <div class="dropdown">
-<button onclick="myFunction()" class="dropbtn">Nofitication</button>
+<button onclick="myFunction()" class="dropbtn"><?php echo count($noti); ?> Nofitication(s)</button>
   <div id="myDropdown" class="dropdown-content">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <?php foreach ($noti as $item ) { ?>
+         <a><?php echo $item->getContent(); ?></a>
+    <?php } ?>
   </div>
 </div>
 
@@ -29,3 +31,4 @@ window.onclick = function(event) {
   }
 }
 </script>
+<?php endif; ?>
