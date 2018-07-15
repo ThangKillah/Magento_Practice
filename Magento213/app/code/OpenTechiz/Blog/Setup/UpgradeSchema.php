@@ -13,41 +13,31 @@ class UpgradeSchema implements  UpgradeSchemaInterface
         $installer = $setup;
         $installer->startSetup();
 
-        if (version_compare($context->getVersion(), '1.1.3') < 0) {
+         $table = $installer->getConnection()
+            ->newTable($installer->getTable('opentechiz_blog_comment_notification'))
+            ->addColumn('noti_id', Table::TYPE_SMALLINT, null, [
+               'identity' => true,
+               'nullable' => false,
+               'primary' => true,
+            ], 'Noti ID')
+            ->addColumn('content', Table::TYPE_TEXT, 255, ['nullable => false'], 'Notification Content')
+            ->addColumn('user_id', Table::TYPE_SMALLINT, null, ['nullable' => false], 'User ID')
+            ->addColumn('post_id', Table::TYPE_SMALLINT, null, ['nullable' => false], 'Post ID')
+            ->addColumn('creation_time', Table::TYPE_TIMESTAMP, null,
+              ['nullable' => false, 'default' => Table::TIMESTAMP_INIT],
+              'Comment Created At')
+            ->setComment('Comment Notification');
 
-            // Get module table
-            $tableName = $setup->getTable('opentechiz_blog_comment');
-
-            // Check if the table already exists
-            if ($setup->getConnection()->isTableExists($tableName) == true) {
-                // Declare data
-                $columns = [
-                    'email' => [
-                        'type' => \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
-                        'nullable' => false,
-                        'comment' => 'Email',
-                    ],
-
-                     'pending' => [
-                        'type' => \Magento\Framework\DB\Ddl\Table::TYPE_SMALLINT,
-                        'nullable' => false,
-                        'comment' => 'Pending',
-                    ],
-
-                     'deny' => [
-                        'type' => \Magento\Framework\DB\Ddl\Table::TYPE_SMALLINT,
-                        'nullable' => false,
-                        'comment' => 'Deny',
-                    ],
-                ];
-
-                $connection = $setup->getConnection();
-                foreach ($columns as $name => $definition) {
-                    $connection->addColumn($tableName, $name, $definition);
-                }
-
-            }
-        }
+        $installer->getConnection()->createTable($table);
+        
+        // modified comment table
+        $tableName = $installer->getTable('opentechiz_blog_comment');
+            $installer->getConnection()->addColumn($tableName, 'user_id', [
+                'type' => Table::TYPE_SMALLINT,
+                'nullable' => true,
+                'default' => NULL,
+                'comment' => 'User ID'
+            ]);
 
         $installer->endSetup();
     }
