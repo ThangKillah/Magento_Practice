@@ -43,6 +43,11 @@ class MassActive extends \Magento\Backend\App\Action
     {
         $collection = $this->filter->getCollection($this->collectionFactory->create());
 
+
+        $this->_eventManager->dispatch('admin_active_comment', ['comments' => $collection]);
+        die('test');
+
+
         foreach ($collection as $item) {
             $item->setStatus(1);
             $item->save();
