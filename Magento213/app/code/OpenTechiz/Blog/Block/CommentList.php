@@ -37,5 +37,21 @@ class CommentList extends \Magento\Framework\View\Element\Template
 
         return $this->getData('comments');
     }
+
+    public function getPostID()
+    {
+        return $this->_request->getParam('post_id', false);
+    }
+
+
+    public function getIdentities()
+    {
+        $identities = [];
+        foreach ($this->getComments() as $comment) {
+            $identities = array_merge($identities, $comment->getIdentities());
+        }
+        $identities[] = \OpenTechiz\Blog\Model\Comment::CACHE_COMMENT_POST_TAG.'_'.$this->getPostID();
+        return $identities;
+    }
     
 }

@@ -7,23 +7,26 @@ use Magento\Framework\Controller\Result\JsonFactory;
 
 class Save extends \Magento\Framework\App\Action\Action
 {
-    protected $resultJsonFactory; 
+     protected $resultJsonFactory; 
      protected $_inlineTranslation;
      protected $_transportBuilder;
      protected $scopeConfig;
+     protected $customerSession;
 
 
     public function __construct(Context $context , 
                                JsonFactory $resultJsonFactory,
                                \Magento\Framework\Translate\Inline\StateInterface $inlineTranslation,
                                \Magento\Framework\Mail\Template\TransportBuilder $transportBuilder,
-                               \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
+                               \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig,
+                               \Magento\Customer\Model\Session $customerSession
     )
     {
         $this->_inlineTranslation = $inlineTranslation;
         $this->resultJsonFactory = $resultJsonFactory;
         $this->_transportBuilder = $transportBuilder;
         $this->scopeConfig = $scopeConfig;
+        $this->customerSession = $customerSession;
 
         return parent::__construct($context);
     }
@@ -67,9 +70,16 @@ class Save extends \Magento\Framework\App\Action\Action
 
               // Retrieve your form data
             $email = $postData['email'];
-            $author   = $postData['user_id'];
+            $post_id   = $postData['post_id'];
             $content    = $postData['content'];
-            $post_id = $postData['post_id'];
+
+            $check = $this->customerSession->getCustomer()->getId();
+            if($check != null) 
+            {
+                $author = $check;
+            }
+            else
+                $author = 0;
 
 
             $comment = $this->_objectManager->create('OpenTechiz\Blog\Model\Comment');

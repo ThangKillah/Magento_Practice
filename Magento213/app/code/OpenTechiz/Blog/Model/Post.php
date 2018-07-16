@@ -1,11 +1,13 @@
 <?php
 namespace OpenTechiz\Blog\Model;
+use Magento\Framework\DataObject\IdentityInterface;
 
-class Post  extends \Magento\Framework\Model\AbstractModel
+class Post  extends \Magento\Framework\Model\AbstractModel implements IdentityInterface
 {
     const STATUS_ENABLED = 1;
     const STATUS_DISABLED = 0;
 
+    const CACHE_TAG = 'blog_post';
 
     protected $_eventPrefix = 'blog_post';
 
@@ -18,6 +20,11 @@ class Post  extends \Magento\Framework\Model\AbstractModel
     public function checkUrlKey($url_key)
     {
         return $this->_getResource()->checkUrlKey($url_key);
+    }
+
+    public function getIdentities()
+    {
+        return [self::CACHE_TAG . '_' . $this->getId()];
     }
 
     public function getAvailableStatuses()
