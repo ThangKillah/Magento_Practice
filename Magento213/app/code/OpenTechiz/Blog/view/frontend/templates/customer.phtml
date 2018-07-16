@@ -1,4 +1,7 @@
-<?php if($block->checkLogin() == 1 ): ?>
+<?php 
+  $helper = $this->helper('OpenTechiz\Blog\Helper\UserInfo');
+?>
+<?php if($helper->isLoggedIn()): ?>
 <?php $noti=$this->getNotification()?>
 <div class="dropdown">
 <button onclick="myFunction()" class="dropbtn"><?php echo count($noti); ?> Nofitication(s)</button>
