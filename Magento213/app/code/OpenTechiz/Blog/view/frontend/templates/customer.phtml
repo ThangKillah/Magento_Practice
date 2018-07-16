@@ -4,13 +4,31 @@
 <?php if($helper->isLoggedIn()): ?>
 <?php $noti=$this->getNotification()?>
 <div class="dropdown">
-<button onclick="myFunction()" class="dropbtn"><?php echo count($noti); ?> Nofitication(s)</button>
+  <div class="wk-customsection"data-bind="scope: 'section'">
+    <button onclick="myFunction()" class="dropbtn">
+      <span data-bind="text: customsection().msg"></span> Notification(s)
+    </button>
+  </div>
+
   <div id="myDropdown" class="dropdown-content">
     <?php foreach ($noti as $item ) { ?>
          <a><?php echo $item->getContent(); ?></a>
     <?php } ?>
   </div>
 </div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "section": {
+                        "component": "OpenTechiz_Blog/js/section"
+                    }
+                }
+            }
+        }
+    }
+</script>
 
 <script>
 /* When the user clicks on the button, 
