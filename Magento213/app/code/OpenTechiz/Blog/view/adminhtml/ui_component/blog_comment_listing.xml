@@ -134,11 +134,11 @@
                                 <item name="value" xsi:type="string">0</item>
                                 <item name="label" xsi:type="string" translate="true">Pending</item>
                             </item>
-                            <item name="enable" xsi:type="array">
+                            <item name="active" xsi:type="array">
                                 <item name="value" xsi:type="string">1</item>
                                 <item name="label" xsi:type="string" translate="true">Active</item>
                             </item>
-                             <item name="enable" xsi:type="array">
+                             <item name="deny" xsi:type="array">
                                 <item name="value" xsi:type="string">2</item>
                                 <item name="label" xsi:type="string" translate="true">Deny</item>
                             </item>

@@ -10,7 +10,7 @@ namespace OpenTechiz\Blog\Block;
 
 
 class CommentList extends \Magento\Framework\View\Element\Template
-
+      implements \Magento\Framework\DataObject\IdentityInterface
 {
     protected $_commentCollecionFactory;
 

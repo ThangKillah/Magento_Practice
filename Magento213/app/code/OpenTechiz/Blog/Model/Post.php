@@ -7,7 +7,7 @@ class Post  extends \Magento\Framework\Model\AbstractModel implements IdentityIn
     const STATUS_ENABLED = 1;
     const STATUS_DISABLED = 0;
 
-    const CACHE_TAG = 'blog_post';
+    const CACHE_TAG = 'opentechiz_blog_post';
 
     protected $_eventPrefix = 'blog_post';
 
