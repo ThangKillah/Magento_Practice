@@ -8,16 +8,13 @@ class PostList extends \Magento\Framework\View\Element\Template
             implements \Magento\Framework\DataObject\IdentityInterface
 {
     protected $_postCollecionFactory;
-    protected $scopeConfig;
 
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
         \OpenTechiz\Blog\Model\ResourceModel\Post\CollectionFactory $postCollectionfactory,
-         \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig ,
         array $data = [])
     {
         parent::__construct($context, $data);
-        $this->_scopeConfig = $scopeConfig;
         $this->_postCollecionFactory = $postCollectionfactory;
     }
 
